@@ -1,0 +1,201 @@
+/* header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: transparent;
+}
+.navbar{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+.navbar .logo{
+    background: url(../../assets/logo-rojo-web-100.png);
+    width: 100px;
+    height: 100px;
+}*/
+.header
+{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: transparent;
+}
+.nav
+{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .7rem;
+}
+
+.nav__logo
+{
+    cursor: pointer;
+    width: 9.25rem;
+}
+.nav__toggle
+{
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding-top: .5rem;
+    padding-right: .5rem;
+    color: var(--menu-gray);
+}
+.nav__menu
+{
+    position: relative;
+}
+
+/*======================MENU DESPLEGABLE======================*/
+@media screen and (max-width: 767px){
+
+    /* What this query really means, is 
+    “If [device width] is smaller than or equal to 767px, then do {…}” */
+
+    .nav__menu
+    {
+        position: fixed;
+        background-color: hsl(213, 100%, 99%);
+        top: 0; /*positionates the menu at the top*/
+        right: -100%; /* hides the menu (when it's not activated) */
+        width: 70%;
+        height: 100%;
+        box-shadow: -1px 0 4px hsla(213, 64%, 15%, .15);
+        padding: 3rem;
+        transition: .5s;
+    } 
+}
+.nav__list
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25rem;
+    gap: 2.5rem;
+}
+.nav__link
+{
+    color: var(--text-color-light);
+    font-weight: var(--medium-weight);
+    font-size: 1rem;
+    transition: var(--img-transition);
+}
+.nav__link:hover
+{
+    color: var(--text-color);
+}
+#login__item
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+.nav__close
+{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--menu-gray);
+    cursor: pointer;
+}
+
+/* ====================== SHOW MENU ===================*/
+.show-menu
+{
+    right: 0;
+}
+/* Change background header */
+.scroll-header
+{
+    background-color: var(--body-color);
+    box-shadow: 0 0 4px hsla(var(--hue-color), 64%, 15%, .15);
+}
+.scroll-header .nav__toggle
+{
+    color: var(--title-color);
+}
+/* Active link */
+.active-link
+{
+    position: relative;
+    color: var(--title-color);
+}
+.active-link::before
+{
+    content: '';
+    position: absolute;
+    background-color: var(--title-color);
+    width: 100%;
+    height: 2px;
+    bottom: -.65rem;
+    left: 0;
+}
+
+@media screen and (max-width: 340px){
+    body{
+        margin: 0;
+    }
+    .nav__menu{
+        padding: 2rem;
+    }
+    .nav__logo{
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width: 768px){
+    .nav
+    {
+        height: calc(var(--header-height) + 1.5rem);
+    }
+    .nav__logo
+    {
+        width: 10rem;
+    }
+    .nav__link
+    {
+        color: var(--text-color);
+        text-transform: initial;
+    }
+    .nav__link:hover
+    {
+        color: var(--title-color);
+    }
+    .nav__menu
+    {
+        display: flex;
+        flex-direction: row-reverse;
+        column-gap: 3rem;
+        margin-right: 1rem;
+    }
+    .nav__list
+    {
+        flex-direction: row;
+        column-gap: 3rem;
+        margin-top: 0;
+    }
+    .nav__item
+    {
+        font-size: var(--h3-font-size);
+    }
+    .nav__toggle,
+    .nav__close
+    {
+        display: none;
+    }
+}
+@media screen and (min-width: 1024px){
+    .container
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

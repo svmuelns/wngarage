@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap');
+
+:root {
+    --darkgray-bg-color: #1E1F21;
+    --darkblue-bg-color: #04071A;
+    --light-bg-color: #FFFFFF;
+    --primary-color: hsl(343, 97%, 37%);
+    --primary-dark: hsl(343, 97%, 24%);
+    --primary-lightdark: hsl(343, 97%, 35%);
+    --secondary-color: #F9FAFB;
+    --secondary-button: hsla(343, 97%, 37%, 0.276);
+    --text-color: rgb(107, 114, 128);
+    --light-gray: rgb(168 172 179);
+    --menu-gray: rgb(156 163 175);
+    --title-color: rgb(17, 24, 39);
+    --hero-button-shadow: rgba(186, 186, 186, 0.681);
+
+    /* ------------- font and typography ---------------*/
+
+    --body-font: 'Inter', sans-serif;
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /* ------------------ font weight -----------------*/
+
+    --light-weight: 400;
+    --medium-weight: 500;
+    --bold-weight: 800;
+
+    /* -------------------- margins -------------------*/
+
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-25: 1.25rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+
+    /* --------------------- misc ---------------------*/
+
+    --img-transition: .3s;
+    --img-hidden: hidden;
+    --img-scale: scale(1.1);
+    --tw-shadow: 0 1px 3px 0rgb(0 0 0 / 0.1),0 1px 2px -1pxrgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 1px 3px 0var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color);
+    --smooth-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+    --header-height: 3.5rem;
+}
+@media screen and (min-widht: 968px) { 
+
+    :root {
+        --biggest-font-size: 4rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.75rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
+/* ==================== BASE ======================= */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size) !important;
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+h1, h2, h3
+{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    font-family: var(--title-font);
+
+}
+ul
+{
+    list-style: none;
+}
+a
+{
+    text-decoration: none;
+}
+img
+{
+    max-width: 100%;
+    height: auto;
+}
+button, 
+input
+{
+    border: none;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+button 
+{
+    cursor: pointer;
+}
+input
+{
+    outline: none;
+}
+main 
+{
+    overflow-x: hidden;
+}
+/*=============== REUSABLE CSS CLASSES =================*/
+
+.section{
+    padding: 4.5rem 0 2.5rem;
+    /* top | horizontal | bottom */
+}
+.section .title{
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    text-align: center;
+    margin-bottom: var(--mb-2);
+}
+.container{
+    max-width: 968px;
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+}
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+/* ------------------ hero section ----------------*/
+.primary-color{
+    color: var(--primary-color) !important;
+}
+.hero{
+    height: 100vh;
+    /* background: linear-gradient(166deg, rgba(3,10,38,1) 0%, rgba(55,13,43,1) 60%, rgba(86,15,46,1) 79%, rgba(116,16,49,1) 94%); */
+    /* background: linear-gradient(166deg, rgba(3,10,38,1) 0%, rgb(36 9 28) 60%, rgb(60 10 32) 79%, rgb(84 12 36) 94%); */
+    background: white;
+}
+.hero__images img{
+    /* background: url('../../assets/cars-red-blue1.png') no-repeat center bottom/contain; */
+    background-repeat: no-repeat;
+    background-position-x: center; 
+    background-position-y: bottom;
+    background-size: contain;
+    width: 100%;
+    position: absolute;
+    object-fit: contain;
+    max-width: 24rem;
+    right:0;
+    bottom: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+
+    animation-name: FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 7s;
+}
+@keyframes FadeInOut {
+    0% {
+        opacity:1;
+    }
+    45% {
+        opacity:1;
+    }
+    55% {
+        opacity:0;
+    }
+    100% {
+        opacity:0;
+    }
+}
+.hero__images img.top {
+    animation-direction: alternate;
+}
+.hero__images img.bottom {
+    animation-direction: alternate-reverse;
+}
+/* .hero__images img.bottom {
+    animation-name: FadeOutIn;
+    animation-timing-function: ;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    animation-direction: alternate;
+    animation-delay: 8s;
+} */
+
+.hero__container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: inherit;
+    padding-top: 20vh;
+    align-content: center;
+}
+.hero__titles *{
+    color: var(--title-color);
+    font-size: var(--biggest-font-size);
+    font-weight: var(--bold-weight);
+}
+.hero__subheaders{
+    max-width: 25rem;
+}
+.hero__subheader{
+    color: var(--text-color);
+    margin-top: var(--mb-0-5);
+    margin-bottom: var(--mb-2-5);
+    font-weight: var(--light-weight);
+}
+.hero__socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    background-color: white;
+    gap: 0.5rem;
+    width: fit-content;
+    padding: 0.7rem 1rem;
+    margin: auto 0 1rem 0;
+    border-radius: 10px;
+    box-shadow: rgb(17 17 26 / 15%) 0px 4px 16px;
+}
+.hero__socials *{
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--title-color);
+}
+.hero__buttons{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+.button{
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: var(--medium-weight);
+    line-height: 1.5rem;
+    padding: .8rem 2rem .8rem 2rem;
+    border-radius: 0.375rem;
+    transition: var(--img-transition);
+    box-shadow: var(--smooth-shadow);
+}
+.primary-button{
+    background-color: var(--primary-color);
+    color: white;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+.hero-button{
+    font-weight: 600;
+    color: white;
+    padding: 1em 1.7em;
+    border: 2px solid black;
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+
+}
+.hero-button::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--primary-dark);
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px black, 0 0.625em 0 0 var(--hero-button-shadow);
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+.hero-button:hover {
+    background: var(--primary-lightdark);
+    transform: translate(0, 0.25em);
+}
+.hero-button:hover::before {
+    box-shadow: 0 0 0 2px black, 0 0.5em 0 0 var(--hero-button-shadow);
+    transform: translate3d(0, 0.5em, -1em);
+}
+.hero-button:active {
+    background: var(--primary-dark);
+    transform: translate(0em, 0.75em);
+}
+.hero-button:active::before {
+    box-shadow: 0 0 0 2px black, 0 0 var(--hero-button-shadow);
+    transform: translate3d(0, 0, -1em);
+
+}
+.secondary-button{
+    background-color: transparent;
+    color: var(--primary-color);
+    font-weight: var(--medium-weight);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.secondary-button:hover{
+    color: var(--primary-dark);
+}
+@media screen and (max-width: 340px){
+    body
+    {
+        margin: 0;
+    }
+}
+@media screen and (min-width: 500px){
+    .secondary-button{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+@media screen and (min-width: 645px){
+    .hero__images img{
+        max-width: 30rem;
+    }
+}
+@media screen and (min-width: 768px){
+    .section
+    {
+        padding: 7rem 0 2rem;
+    }
+    .button{
+        font-size: 1.125rem;
+        padding: 1rem 2.5rem;
+    }
+    .hero__images img{
+        max-width: 35rem;
+    }
+    .hero__subheader{
+        font-weight: var(--light-weight);
+    }
+}
+@media screen and (min-width: 1024px){
+    .container
+    {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero__subheader
+    {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: var(--light-weight);
+    }
+    .hero__titles *
+    {
+        font-size: 3.75rem;
+    }
+    .hero__socials{
+        margin: auto 0 2rem 0;
+        gap: 1rem;
+    }
+    .hero__socials *{
+        font-size: 2rem;
+        display: inline-flex;
+        gap: 1.5rem;
+    }
+    
+}
