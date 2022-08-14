@@ -13,7 +13,7 @@ function Navbar() {
     function changeColor() {
         if (window.scrollY >= 620 & window.scrollY <= 1200) {
             setColor(true)
-        } else if (window.scrollY >= 3200) {
+        } else if (window.scrollY >= 3100) {
             setColor(true)
         } else {
             setColor(false)

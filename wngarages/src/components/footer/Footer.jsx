@@ -73,6 +73,7 @@ function FooterSection() {
                     </div>
                 </div>
             </div>
+            <p id='madeby'>website made by <a href="http://linktr.ee/svmuelns" target="_blank">svmuelns</a></p>
         </footer>
     )
 }
