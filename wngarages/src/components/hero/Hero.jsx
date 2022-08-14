@@ -1,7 +1,7 @@
 /*rfce*/
 import React from 'react'
 import './Hero.css'
-import {FaFacebook, FaEnvelope, FaWhatsapp} from 'react-icons/fa'
+import {FaFacebook, FaEnvelope, FaWhatsapp, FaPhoneAlt} from 'react-icons/fa'
 import garage from '../../assets/light_bg_small.png'
 import delivery from '../../assets/red_house.png'
 
@@ -26,8 +26,9 @@ function HeroSection() {
                 </div>
 
                 <div className='hero__buttons'>
-                    <a href="#about" className='hero-button primary-button button'>
-                        Get Started
+                    <a href="tel:305-438-8987" className='hero-button primary-button button'>
+                        <FaPhoneAlt />
+                        Get a Quote
                     </a>
                     {/* <a href="" className='secondary-button button'>
                         <FaMapMarkerAlt />

@@ -346,6 +346,13 @@ main
 .secondary-button:hover{
     color: var(--primary-dark);
 }
+.hero__buttons a{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    width: fit-content;
+    padding: 1em 1em !important;
+}
 @media screen and (max-width: 340px){
     body
     {
@@ -378,6 +385,9 @@ main
     .hero__subheader{
         font-weight: var(--light-weight);
     }
+    .hero__buttons a{
+        padding: 1.1em 1.1em !important;
+    }
 }
 @media screen and (min-width: 1024px){
     .container
@@ -404,7 +414,9 @@ main
         display: inline-flex;
         gap: 1.5rem;
     }
-    
+    .hero__buttons a{
+        padding: 1.3em 1.3em !important;
+    }
 }
 
 /*=========================== SCROLL BAR =======================*/
