@@ -37,6 +37,7 @@ footer img {
     padding: 1rem;
     padding-bottom: 3rem;
     height: 110vh;
+    min-height: 670px;
 }
 .footer__div *{
     color: white;
