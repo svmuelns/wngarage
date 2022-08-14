@@ -1,12 +1,25 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import {CgClose, CgMenu} from 'react-icons/cg'
-import logo from '../../assets/logo-rojo-largo-perfect.png'
+import logo from '../../assets/logo1.png'
 
 function Navbar() {
+    // toggle menu: for closing or opening menu when clicking
     const[nav, setNav] = useState(false)
-    const toggle = () => setNav(!nav)
+    function toggle() { setNav(!nav) }  // const toggle = () => setNav(!nav)
 
+    // change nav color when scrolling
+    const [color, setColor] = useState(false)
+    function changeColor() {
+        if (window.scrollY >= 620 & window.scrollY <= 1200) {
+            setColor(true)
+        } else if (window.scrollY >= 3200) {
+            setColor(true)
+        } else {
+            setColor(false)
+        }
+    }
+    window.addEventListener('scroll', changeColor)
     return (
         <header className="header" id="header">
         <nav className="nav container">
@@ -22,19 +35,29 @@ function Navbar() {
 
                 <ul className="nav__list" id="nav__list">
                     <li className="nav__item">
-                        <a href="#home" className="nav__link">Home</a>
+                        <a href="#home" onClick={toggle} className={`nav__link ${color? 'scrolling-font-color': ''}`}>
+                            Home
+                        </a>
                     </li>
                     <li className="nav__item"> 
-                        <a href="#about" className="nav__link">About</a>
+                        <a href="#about" onClick={toggle} className={`nav__link ${color? 'scrolling-font-color': ''}`}>
+                            About
+                        </a>
                     </li>
                     <li className="nav__item">
-                        <a href="#services" className="nav__link">Services</a>
+                        <a href="#service" onClick={toggle} className={`nav__link ${color? 'scrolling-font-color': ''}`}>
+                            Services
+                        </a>
                     </li>
                     <li className="nav__item hide"> 
-                        <a href="#location" className="nav__link">Location</a>
+                        <a href="#delivery" onClick={toggle} className={`nav__link ${color? 'scrolling-font-color': ''}`}>
+                            Delivery
+                        </a>
                     </li>
                     <li className="nav__item"> 
-                        <a href="#contact" className="nav__link">Contact</a>
+                        <a href="#contact" onClick={toggle} className={`nav__link ${color? 'scrolling-font-color': ''}`}>
+                            Contact
+                        </a>
                     </li>
                 </ul>
 

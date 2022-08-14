@@ -1,14 +1,13 @@
 /*rfce*/
 import React from 'react'
 import './Hero.css'
-import {FaFacebook, FaEnvelope, FaWhatsapp, FaMapMarkerAlt, FaPhoneAlt} from 'react-icons/fa'
-// import {FaEnvelope} from 'react-icons/fa'
+import {FaFacebook, FaEnvelope, FaWhatsapp} from 'react-icons/fa'
 import garage from '../../assets/light_bg_small.png'
 import delivery from '../../assets/red_house.png'
 
 function HeroSection() {
     return (
-        <section className='hero'>
+        <section className='hero' id='home'>
 
             <div className='hero__images'>
                 <img src={garage} className='top'></img>
@@ -22,25 +21,25 @@ function HeroSection() {
                 </div>
                 <div className='hero__subheaders'>
                     <h3 className='hero__subheader'>
-                        Need a car mechanic? We're here to get you going, wherever and whenever you need it.
+                        Need a car mechanic? We're here<br></br> to get you going, wherever and whenever you need it.
                     </h3>
                 </div>
 
                 <div className='hero__buttons'>
-                    <a href="" className='hero-button primary-button button'>
+                    <a href="#about" className='hero-button primary-button button'>
                         Get Started
                     </a>
-                    <a href="" className='secondary-button button'>
+                    {/* <a href="" className='secondary-button button'>
                         <FaMapMarkerAlt />
                         Garage
-                    </a>
+                    </a> */}
                 </div>
 
                 <div className='hero__socials'>
                     <a href="https://www.facebook.com/WN-Garage-duo-auto-repair-103639939067239" className='facebook'>
                         <FaFacebook />
                     </a>
-                    <a href="https://api.whatsapp.com/send?phone=17868731575" className='whatsapp'>
+                    <a href="https://api.whatsapp.com/send?phone=13054388987" className='whatsapp'>
                         <FaWhatsapp />
                     </a>
                     <a href="mailto:duowngarage@gmail.com" className='email'>

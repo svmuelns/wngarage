@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
     --darkgray-bg-color: #1E1F21;
     --darkblue-bg-color: #04071A;
-    --light-bg-color: #FFFFFF;
+    --light-bg-color: #e9ebec;
     --primary-color: hsl(343, 97%, 37%);
     --primary-dark: hsl(343, 97%, 24%);
     --primary-lightdark: hsl(343, 97%, 35%);
@@ -14,7 +14,10 @@
     --menu-gray: rgb(156 163 175);
     --title-color: rgb(17, 24, 39);
     --hero-button-shadow: rgba(186, 186, 186, 0.681);
-
+    --scroll-bar-color: hsl(213, 12%, 90%);
+    --scroll-thumb-color: hsl(213, 12%, 75%);
+    --scroll-bar-light: hsl(213, 8%, 60%);
+    
     /* ------------- font and typography ---------------*/
 
     --body-font: 'Inter', sans-serif;
@@ -87,9 +90,7 @@ body
 h1, h2, h3
 {
     color: var(--title-color);
-    font-weight: var(--font-semi-bold);
-    font-family: var(--title-font);
-
+    font-weight: var(--bold-weight)
 }
 ul
 {
@@ -126,14 +127,21 @@ main
 /*=============== REUSABLE CSS CLASSES =================*/
 
 .section{
+    height: 100vh;
     padding: 4.5rem 0 2.5rem;
     /* top | horizontal | bottom */
 }
-.section .title{
-    font-size: var(--h2-font-size);
+.title{
+    font-size: var(--h1-font-size);
     color: var(--title-color);
     text-align: center;
     margin-bottom: var(--mb-2);
+    font-weight: var(--bold-weight);
+}
+.subheader{
+    margin-bottom: var(--mb-2-5);
+    line-height: 1.4rem;
+    text-align: center;
 }
 .container{
     max-width: 968px;
@@ -143,6 +151,9 @@ main
 .grid{
     display: grid;
     gap: 1.5rem;
+}
+.bold{
+    font-weight: var(--bold-weight);
 }
 /* ------------------ hero section ----------------*/
 .primary-color{
@@ -245,6 +256,10 @@ main
     width: 1.5rem;
     height: 1.5rem;
     color: var(--title-color);
+    transition: var(--img-transition);
+}
+.hero__socials *:hover{
+    color: rgb(84, 93, 100) !important;
 }
 .hero__buttons{
     display: flex;
@@ -277,6 +292,7 @@ main
     text-decoration: none;
     font-size: inherit;
     font-family: inherit;
+    z-index: 10;
 }
 .hero-button{
     font-weight: 600;
@@ -389,4 +405,20 @@ main
         gap: 1.5rem;
     }
     
+}
+
+/*=========================== SCROLL BAR =======================*/
+::-webkit-scrollbar
+{
+    width: .70rem;
+    height: .7rem;
+    background-color: var(--scroll-bar-color);
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: var(--scroll-thumb-color);
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background-color: var(--scroll-bar-light);
 }
