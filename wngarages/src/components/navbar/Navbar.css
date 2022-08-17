@@ -151,10 +151,10 @@
     {
         height: calc(var(--header-height) + 1.5rem);
     }
-    .nav__logo
+    /* .nav__logo
     {
         width: 10rem;
-    }
+    } */
     .nav__link
     {
         color: var(--title-color);

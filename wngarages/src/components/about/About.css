@@ -13,7 +13,6 @@
     background-color: white;
     clip-path: polygon(0 0, 100% 0, 100% 25%, 0 100%);    left: 0;
     right: 0;
-    bottom: -4.9rem;
     position: absolute;
 }
 .about .title{
@@ -84,7 +83,6 @@
     }
     .about__polygon-start{
         height: 7rem;
-        bottom: -6.9rem;
     }
     .about__img-one{
         width: 200px;

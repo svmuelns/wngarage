@@ -6,7 +6,6 @@ import about2 from '../../assets/about11.jpg'
 function AboutSection() {
     return (
         <section className='about section' id='about'>
-            <div className='about__polygon-start'></div>
             <div className='about__container container grid'>
                 <div className='about__info'>
                     <h1 className='about__title title'>
