@@ -7,6 +7,9 @@ import sparkplugs from '../../assets/spark-plugs.png'
 import starter from '../../assets/starter.png'
 import tires from '../../assets/tires.png'
 import service from '../../assets/service7.png'
+import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
+
 
 function ServiceSection() {
   return (
@@ -17,12 +20,15 @@ function ServiceSection() {
             </div>
         <div className='service__container container'>
             <div className='service__info'>
+                <Fade top>
                 <h1 className='service__title title'>
                     Most common services
                 </h1>
                 <p className='service__subheader subheader'>
                     Diagnose, repair and replace.
                 </p>
+                </Fade>
+                <Slide right cascade>
                 <div className='service__grid grid'>
                     <div className='service__item' id='battery'>
                         <div className='item__icon'>
@@ -73,6 +79,7 @@ function ServiceSection() {
                         </div>
                     </div>
                 </div>
+                </Slide>
                 <p className='service__footer subheader'>
                     If you don't know what the problem is, you can always... 
                 </p>

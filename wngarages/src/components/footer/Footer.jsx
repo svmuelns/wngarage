@@ -2,7 +2,8 @@ import React from 'react'
 import './Footer.css'
 import footer from '../../assets/footer1.jpg'
 import { FaPhoneAlt, FaFacebook, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
-// import sr from '../ScrollReveal'
+import LightSpeed from 'react-reveal/LightSpeed';
+import Fade from 'react-reveal/Fade';
 
 function FooterSection() {
     // const config = {
@@ -19,16 +20,21 @@ function FooterSection() {
         <footer className='footer' id='footer'>
             <div className='footer__wrap'>
                 <div className='footer__titles'>
+                    <LightSpeed left>
                     <h1 className='footer__title title'>
                         Best prices, in real time.
                     </h1>
+                    </LightSpeed>
                     <a href="tel:305-438-8987" className='about-button hero-button primary-button button'>
                         <FaPhoneAlt />
                         Get a Quote
                     </a>
+
+
                 </div>
                 <img src={footer} className='footer-img' alt="footer" />
             </div>
+            <Fade bottom>
             <div className='footer__div'>
                 <div className='footer__infos'>
                     <div className='footer__info'>
@@ -73,6 +79,8 @@ function FooterSection() {
                     </div>
                 </div>
             </div>
+            </Fade>
+
             <p id='madeby'>website made by <a href="http://linktr.ee/svmuelns" target="_blank">svmuelns</a></p>
         </footer>
     )

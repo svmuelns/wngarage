@@ -4,6 +4,7 @@ import './Hero.css'
 import {FaFacebook, FaEnvelope, FaWhatsapp, FaPhoneAlt} from 'react-icons/fa'
 import garage from '../../assets/light_bg_small.png'
 import delivery from '../../assets/red_house.png'
+import Fade from 'react-reveal/Fade';
 
 function HeroSection() {
     return (
@@ -17,14 +18,16 @@ function HeroSection() {
             <div className='hero__container container'>
                 <div className='hero__titles'>
                     <h1 className='hero__title'>Save time,</h1>
+                    <Fade left>
                     <h1 className='hero__subtitle'>We <span className="primary-color">fix your car.</span></h1>
+                    </Fade>
                 </div>
                 <div className='hero__subheaders'>
                     <h3 className='hero__subheader'>
                         Need a car mechanic? We're here<br></br> to get you going, wherever and whenever you need it.
                     </h3>
                 </div>
-
+                <Fade left>
                 <div className='hero__buttons'>
                     <a href="tel:305-438-8987" className='hero-button primary-button button'>
                         <FaPhoneAlt />
@@ -35,7 +38,7 @@ function HeroSection() {
                         Garage
                     </a> */}
                 </div>
-
+                
                 <div className='hero__socials'>
                     <a href="https://www.facebook.com/WN-Garage-duo-auto-repair-103639939067239" className='facebook'>
                         <FaFacebook />
@@ -47,6 +50,7 @@ function HeroSection() {
                         <FaEnvelope />
                     </a>
                 </div>
+                </Fade>
             </div>
         </section>
     )

@@ -1,10 +1,12 @@
 import React from 'react'
 import './Contact.css'
+import Zoom from 'react-reveal/Zoom';
 
 function ContactSection() {
   return (
     <section className='contact section' id='contact'>
         <div className='contact__container container'>
+            <Zoom clear>
             <div className='contact__titles'>
                 <h1 className='contact__title title'>
                     Contact Us
@@ -22,7 +24,7 @@ function ContactSection() {
                     <button className='contact-button hero-button primary-button button' type="submit">Submit</button>
                 </form>
             </div>
-            
+            </Zoom>
         </div>
     </section>
   )
