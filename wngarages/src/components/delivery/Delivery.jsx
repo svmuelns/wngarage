@@ -1,6 +1,6 @@
 import React from 'react'
 import './Delivery.css'
-import delivery from '../../assets/delivery1.png'
+import delivery from '../../assets/delivery2.png'
 import Fade from 'react-reveal/Fade';
 import LightSpeed from 'react-reveal/LightSpeed';
 

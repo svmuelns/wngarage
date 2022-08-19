@@ -40,6 +40,9 @@
 .delivery__images{
     text-align: center;
 }
+.delivery-img{
+    width: 400px;
+}
 #surprise{
     display: none;
     padding: 0;
