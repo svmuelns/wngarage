@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import {CgClose, CgMenu} from 'react-icons/cg'
-import logo from '../../assets/logo1.png'
+import logo from '../../assets/logo2.png'
 
 function Navbar() {
     // toggle menu: for closing or opening menu when clicking
