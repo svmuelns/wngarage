@@ -25,6 +25,9 @@
     gap: 1rem;
     margin-bottom: 1rem;
 }
+.contact-div *{
+    width: 100%;
+}
 .contact__form input{
     width: 100%;
     max-width: 500px;
