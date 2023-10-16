@@ -71,33 +71,6 @@ function Navbar() {
             </div>
         </nav>
     </header>
-
-
-
-
-
-
-
-
-
-
-
-        // <header className="header" id="header">
-        //     <nav className='navbar container'>
-        //         <div className='logo__div'>
-        //             <div className='logo'></div>
-        //         </div>
-        //         <ul className='nav__menu' id='nav-menu'>
-        //             <li>Home</li>
-        //             <li>About</li>
-        //             <li>Services</li>
-        //             <li>Contact</li>
-        //         </ul>
-        //         <div className='nav__toggle'>
-        //             <FaBars />
-        //         </div>
-        //     </nav>
-        // </header>
     )
 }
 

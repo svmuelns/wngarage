@@ -29,14 +29,16 @@ function HeroSection() {
                 </div>
                 <Fade left>
                 <div className='hero__buttons'>
-                    <a href="tel:305-438-8987" className='hero-button primary-button button'>
+                    {/* <a href=":305-438-8987" className='hero-button primary-button button'>
                         <FaPhoneAlt />
                         Get a Quote
-                    </a>
-                    {/* <a href="" className='secondary-button button'>
-                        <FaMapMarkerAlt />
-                        Garage
                     </a> */}
+                    <button class="pushable">
+                        <a href='tel:6122350262' class="front">
+                            <FaPhoneAlt />
+                            Get a Quote
+                        </a>
+                    </button>
                 </div>
                 
                 <div className='hero__socials'>
